@@ -7,7 +7,14 @@ interface PieChartProps {
 }
 
 const CustomPieChart: React.FC<PieChartProps> = ({ data, colors }) => {
-  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, }: any) => {
+  const renderCustomizedLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    percent,
+  }: any) => {
     const radius = outerRadius - innerRadius;
     const x = cx + radius * Math.cos(-midAngle * Math.PI / 180);
     const y = cy + radius * Math.sin(-midAngle * Math.PI / 180);
@@ -38,7 +45,7 @@ const CustomPieChart: React.FC<PieChartProps> = ({ data, colors }) => {
           label={renderCustomizedLabel}
         >
           {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+            <Cell key={`cell-${index}-${entry.name}`} fill={colors[index % colors.length]} />
           ))}
         </Pie>
         <Tooltip />
