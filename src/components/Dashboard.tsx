@@ -130,7 +130,7 @@ const Dashboard: React.FC = () => {
               <h3 className={`font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-900'}`}>{feedback.customer}</h3>
               <div className="flex mb-2">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className={`text-yellow-400 ${i < feedback.rating ? 'text-yellow-500' : ''}`}>★</span>
+                  <span key={i} className={`text-gray-300 ${i < feedback.rating ? 'text-yellow-500' : ''}`}>★</span>
                 ))}
               </div>
               <p className={`${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>{feedback.comment}</p>
