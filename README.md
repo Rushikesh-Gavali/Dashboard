@@ -2,6 +2,8 @@
 
 A modern dashboard application built with React, featuring dynamic charts, responsive design, and a dark mode toggle. This project showcases various components including charts, metrics cards, and a sidebar, all styled with Tailwind CSS.
 
+[Vercel Link](https://dashboard-gilt-sigma.vercel.app/)
+
 
 ## Features
 
